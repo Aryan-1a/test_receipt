@@ -33,13 +33,19 @@ function App() {
     setpaymentmethod('Cash')
     setremark('')
   }
+  const handleCancel = (e) => {
+   
+    setdate('')
+    setamount('')
+    setpaymentmethod('Cash')
+    setremark('')
+  }
   return (
     <div>
 <Header/>
 <table className='table1' > <tr><td>
      <label>
-        Date &emsp;&emsp;&emsp;&emsp;</label></td><td><input onChange={handledatechange} value={date} type="date" placeholder='Enter the Date' required
-        /></td></tr>
+        Date &emsp;&emsp;&emsp;&emsp;</label></td><td><input onChange={handledatechange}  value={date} type="date" placeholder='Enter the Date' required/></td></tr>
     <tr><td>
       <label>
         Amount &emsp;&emsp;&emsp;&emsp;</label></td><td><input onChange={handleamountchange} value={amount} type="text" placeholder='Enter Amount (in INR)' required
@@ -55,7 +61,10 @@ function App() {
         Remark &emsp;&emsp;&emsp;&emsp;</label></td><td><input onChange={handleremarkchange} value={remark} placeholder='Enter Remark'
         />
       </td></tr> </table>
-      <button onClick={handlesubmit}>Submit</button>
+      <div className='button'>
+      <button className='Cancel' onClick={handleCancel}>CANCEL<br/>(ESC)</button>&emsp;&emsp;&emsp;
+      <button className='Submit' onClick={handlesubmit}>Submit<br/>(S)</button>
+      </div>
 
 
 
