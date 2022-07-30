@@ -1,9 +1,14 @@
 .App {
   text-align: center;
 }
-table, th, td {
-  border:none;
+.table1, .table1 th, .table1 td, .table1 tr {
+  border:0px;
+
 }
+.table2, .table2 th, .table2 td {
+  border:solid black;}
+  
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
