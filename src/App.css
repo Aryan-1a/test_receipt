@@ -7,6 +7,19 @@
 }
 .table2, .table2 th, .table2 td {
   border:solid black;}
+
+  .Cancel{
+    
+    color: red;
+    
+    border-color: red;
+  }
+  .Submit{
+    background-color: green ;
+  }
+  .button{
+    margin-left: 180px;
+  }
   
 
 .App-logo {
