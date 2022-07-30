@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './App.css';
+import Header from './Header';
 
 function App() {
   const [date, setdate] = useState('');
@@ -32,33 +33,42 @@ function App() {
     setpaymentmethod('Cash')
     setremark('')
   }
+  const handleCancel = (e) => {
+   
+    setdate('')
+    setamount('')
+    setpaymentmethod('Cash')
+    setremark('')
+  }
   return (
     <div>
-
-
-      <div><label>
-        Date &emsp;&emsp;&emsp;&emsp;</label><input onChange={handledatechange} value={date} type="date" placeholder='Enter the Date' required
-        />
-      </div>
-      <div><label>
-        Amount &emsp;&emsp;&emsp;&emsp;<input onChange={handleamountchange} value={amount} type="text" placeholder='Enter Amount (in INR)' required
-        />
-      </label> </div>
-      <div><label for="payment Mode">
-        Payment Mode &emsp;&emsp;&emsp;&emsp; <select onChange={handlepaymentmethodchange} id="payment Mode"> <option value="Cash">Cash</option>
+<Header/>
+<table className='table1' > <tr><td>
+     <label>
+        Date &emsp;&emsp;&emsp;&emsp;</label></td><td><input onChange={handledatechange}  value={date} type="date" placeholder='Enter the Date' required/></td></tr>
+    <tr><td>
+      <label>
+        Amount &emsp;&emsp;&emsp;&emsp;</label></td><td><input onChange={handleamountchange} value={amount} type="text" placeholder='Enter Amount (in INR)' required
+        /></td></tr> 
+      <tr><td>
+      <label for="payment Mode">
+        Payment Mode &emsp;&emsp;&emsp;&emsp;</label> </td><td><select onChange={handlepaymentmethodchange} id="payment Mode"> <option value="Cash">Cash</option>
           <option value="UPI">UPI</option>
           <option value="Credit/Debit Card">Credit/Debit Card</option>
-        </select>
-      </label> </div>
-      <div><label>
-        Remark &emsp;&emsp;&emsp;&emsp;<input onChange={handleremarkchange} value={remark} placeholder='Enter Remark'
+        </select></td></tr>
+        <tr><td>
+      <label>
+        Remark &emsp;&emsp;&emsp;&emsp;</label></td><td><input onChange={handleremarkchange} value={remark} placeholder='Enter Remark'
         />
-      </label> </div>
-      <button onClick={handlesubmit}>Submit</button>
+      </td></tr> </table>
+      <div className='button'>
+      <button className='Cancel' onClick={handleCancel}>CANCEL<br/>(ESC)</button>&emsp;&emsp;&emsp;
+      <button className='Submit' onClick={handlesubmit}>Submit<br/>(S)</button>
+      </div>
 
 
 
-      <table>
+      <table className='table2' >
         <tr>
           <th>Sr.no</th>
           <th>Date</th>
