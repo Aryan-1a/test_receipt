@@ -35,25 +35,25 @@ function App() {
   return (
     <div>
 
-
-      <div><label>
-        Date &emsp;&emsp;&emsp;&emsp;</label><input onChange={handledatechange} value={date} type="date" placeholder='Enter the Date' required
-        />
-      </div>
-      <div><label>
-        Amount &emsp;&emsp;&emsp;&emsp;<input onChange={handleamountchange} value={amount} type="text" placeholder='Enter Amount (in INR)' required
-        />
-      </label> </div>
-      <div><label for="payment Mode">
-        Payment Mode &emsp;&emsp;&emsp;&emsp; <select onChange={handlepaymentmethodchange} id="payment Mode"> <option value="Cash">Cash</option>
+<table> <tr><td>
+     <label>
+        Date &emsp;&emsp;&emsp;&emsp;</label></td><td><input onChange={handledatechange} value={date} type="date" placeholder='Enter the Date' required
+        /></td></tr>
+    <tr><td>
+      <label>
+        Amount &emsp;&emsp;&emsp;&emsp;</label></td><td><input onChange={handleamountchange} value={amount} type="text" placeholder='Enter Amount (in INR)' required
+        /></td></tr> 
+      <tr><td>
+      <label for="payment Mode">
+        Payment Mode &emsp;&emsp;&emsp;&emsp;</label> </td><td><select onChange={handlepaymentmethodchange} id="payment Mode"> <option value="Cash">Cash</option>
           <option value="UPI">UPI</option>
           <option value="Credit/Debit Card">Credit/Debit Card</option>
-        </select>
-      </label> </div>
-      <div><label>
-        Remark &emsp;&emsp;&emsp;&emsp;<input onChange={handleremarkchange} value={remark} placeholder='Enter Remark'
+        </select></td></tr>
+        <tr><td>
+      <label>
+        Remark &emsp;&emsp;&emsp;&emsp;</label></td><td><input onChange={handleremarkchange} value={remark} placeholder='Enter Remark'
         />
-      </label> </div>
+      </td></tr> </table>
       <button onClick={handlesubmit}>Submit</button>
 
 
