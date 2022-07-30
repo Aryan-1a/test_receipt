@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './App.css';
+import Header from './Header';
 
 function App() {
   const [date, setdate] = useState('');
@@ -34,8 +35,8 @@ function App() {
   }
   return (
     <div>
-
-<table> <tr><td>
+<Header/>
+<table className='table1' > <tr><td>
      <label>
         Date &emsp;&emsp;&emsp;&emsp;</label></td><td><input onChange={handledatechange} value={date} type="date" placeholder='Enter the Date' required
         /></td></tr>
@@ -58,7 +59,7 @@ function App() {
 
 
 
-      <table>
+      <table className='table2' >
         <tr>
           <th>Sr.no</th>
           <th>Date</th>
